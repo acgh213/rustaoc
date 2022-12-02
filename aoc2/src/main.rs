@@ -1,14 +1,9 @@
-use crate::{Solution, SolutionPair};
 use std::fs::File;
 use std::path::Path;
 use std::io::{self,BufRead};
 use std::io::prelude::*;
-///////////////////////////////////////////////////////////////////////////////
 
-pub fn solve() -> SolutionPair {
-    // Your solution here...
-    let sol1: u64 = 0;
-    let sol2: u64 = 0;
+fn main() {
     let path = Path::new("./input/2.txt");
     let display = path.display();
 
@@ -24,6 +19,4 @@ pub fn solve() -> SolutionPair {
         Err(why) => panic!("couldn't read {}: {}", display, why),
         Ok(_) => print!("{} contains:\n{}", display, s),
     }
-
-    (Solution::U64(sol1), Solution::U64(sol2))
 }
